@@ -5,4 +5,5 @@ INNER JOIN route_master rm ON dd.rm_id = rm.rm_id
 INNER JOIN route_details rd ON rm.rm_id = rd.rm_id
 INNER JOIN jeep j ON rd.jeep_id = j.jeep_id
 WHERE
- dd.rm_id IN ( SELECT rm2.rm_id FROM route_master rm2 WHERE rm2.rm_from = 'point 2' OR rm2.rm_to = 'point 4' )
+ dm.d_from = 'point 1' AND
+ dm.d_to = 'point 4'
